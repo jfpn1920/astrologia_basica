@@ -1,0 +1,88 @@
+/* ===== Estilos generales ===== */
+/* Quita márgenes por defecto y facilita el cálculo de tamaños */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+/* Variables de color para reutilizarlas en todo el diseño */
+:root {
+    --fondo: #1e1b4b;
+    --tarjeta: #312e81;
+    --acento: #fbbf24;
+    --texto: #f5f3ff;
+}
+/* Fondo y tipografía de toda la página */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--fondo);
+    color: var(--texto);
+    padding: 24px 16px;
+}
+/* ===== Contenedor y encabezado ===== */
+/* Caja central que agrupa todo el contenido */
+.contenedor { max-width: 760px; margin: 0 auto; }
+/* Encabezado centrado */
+.encabezado { text-align: center; margin-bottom: 20px; }
+.encabezado h1 { color: var(--acento); margin-bottom: 6px; }
+.encabezado p { color: #c4b5fd; }
+/* ===== Filtros ===== */
+/* Fila de botones de filtro que baja de línea si no caben */
+.filtros { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 16px; }
+/* Botón de filtro */
+.filtro {
+    padding: 8px 14px;
+    border: 2px solid var(--tarjeta);
+    border-radius: 20px;
+    background: transparent;
+    color: var(--texto);
+    cursor: pointer;
+}
+/* Filtro seleccionado (clase que añade el JS) */
+.filtro.activo {
+    background: var(--acento);
+    border-color: var(--acento);
+    color: #000;
+    font-weight: bold;
+}
+/* ===== Barra de favoritos ===== */
+/* Contador a la izquierda y botón a la derecha */
+.barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+/* Botón para quitar favoritos */
+.limpiar {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    background: #6b7280;
+    color: #fff;
+    cursor: pointer;
+}
+/* ===== Tarjetas ===== */
+/* Cuadrícula de 4 columnas para los 12 signos */
+.tarjetas { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+/* Estilo base de cada tarjeta */
+.tarjeta {
+    position: relative;
+    padding: 18px 8px;
+    background: var(--tarjeta);
+    border: 3px solid transparent;
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+/* Efecto al pasar el mouse por una tarjeta */
+.tarjeta:hover { transform: translateY(-4px); }
+/* Tarjeta oculta por el filtro (clase que añade el JS) */
+.tarjeta.oculta { display: none; }
+/* Tarjeta favorita: borde dorado y estrella en la esquina */
+.tarjeta.favorito { border-color: var(--acento); }
+.tarjeta.favorito::after { content: '⭐'; position: absolute; top: 6px; right: 8px; }
+/* Símbolo grande del signo */
+.simbolo { font-size: 2.6rem; color: var(--acento); }
+/* Nombre del signo */
+.tarjeta h2 { font-size: 1.1rem; margin: 6px 0; }
+/* Fechas y elemento (texto pequeño) */
+.fechas { font-size: 0.8rem; color: #c4b5fd; margin-bottom: 6px; }
+.elemento { font-size: 0.85rem; }

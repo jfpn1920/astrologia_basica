@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>astrologia basica</title>
+    <link rel="stylesheet" href="astrologia_basica.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="astrologia_basica.js" defer></script>
+</head>
+<body>
+    <!-------------------------------------->
+    <!--|estructuracion_astrologia_basica|-->
+    <!-------------------------------------->
+    <main class="contenedor">
+        <!-- Encabezado con título y descripción -->
+        <header class="encabezado">
+            <h1>🔮 Astrología Básica</h1>
+            <p>Filtra por elemento y haz clic en un signo para marcarlo como favorito.</p>
+        </header>
+        <!-- Botones para filtrar los signos por elemento (data-filtro guarda el valor) -->
+        <nav class="filtros" id="filtros">
+            <button class="filtro" data-filtro="todos">Todos</button>
+            <button class="filtro" data-filtro="fuego">🔥 Fuego</button>
+            <button class="filtro" data-filtro="tierra">🌱 Tierra</button>
+            <button class="filtro" data-filtro="aire">💨 Aire</button>
+            <button class="filtro" data-filtro="agua">💧 Agua</button>
+        </nav>
+        <!-- Contador de favoritos y botón para quitarlos todos -->
+        <div class="barra">
+            <span id="contador">⭐ Favoritos: 0</span>
+            <button id="btn-limpiar" class="limpiar">Quitar favoritos</button>
+        </div>
+        <!-- Zona donde están las 12 tarjetas de los signos -->
+        <section class="tarjetas" id="tarjetas">
+            <!-- Aries -->
+            <article class="tarjeta" data-signo="aries" data-elemento="fuego">
+                <span class="simbolo">♈</span><h2>Aries</h2>
+                <p class="fechas">21 mar – 19 abr</p><p class="elemento">🔥 Fuego</p>
+            </article>
+            <!-- Tauro -->
+            <article class="tarjeta" data-signo="tauro" data-elemento="tierra">
+                <span class="simbolo">♉</span><h2>Tauro</h2>
+                <p class="fechas">20 abr – 20 may</p><p class="elemento">🌱 Tierra</p>
+            </article>
+            <!-- Géminis -->
+            <article class="tarjeta" data-signo="geminis" data-elemento="aire">
+                <span class="simbolo">♊</span><h2>Géminis</h2>
+                <p class="fechas">21 may – 20 jun</p><p class="elemento">💨 Aire</p>
+            </article>
+            <!-- Cáncer -->
+            <article class="tarjeta" data-signo="cancer" data-elemento="agua">
+                <span class="simbolo">♋</span><h2>Cáncer</h2>
+                <p class="fechas">21 jun – 22 jul</p><p class="elemento">💧 Agua</p>
+            </article>
+            <!-- Leo -->
+            <article class="tarjeta" data-signo="leo" data-elemento="fuego">
+                <span class="simbolo">♌</span><h2>Leo</h2>
+                <p class="fechas">23 jul – 22 ago</p><p class="elemento">🔥 Fuego</p>
+            </article>
+            <!-- Virgo -->
+            <article class="tarjeta" data-signo="virgo" data-elemento="tierra">
+                <span class="simbolo">♍</span><h2>Virgo</h2>
+                <p class="fechas">23 ago – 22 sep</p><p class="elemento">🌱 Tierra</p>
+            </article>
+            <!-- Libra -->
+            <article class="tarjeta" data-signo="libra" data-elemento="aire">
+                <span class="simbolo">♎</span><h2>Libra</h2>
+                <p class="fechas">23 sep – 22 oct</p><p class="elemento">💨 Aire</p>
+            </article>
+            <!-- Escorpio -->
+            <article class="tarjeta" data-signo="escorpio" data-elemento="agua">
+                <span class="simbolo">♏</span><h2>Escorpio</h2>
+                <p class="fechas">23 oct – 21 nov</p><p class="elemento">💧 Agua</p>
+            </article>
+            <!-- Sagitario -->
+            <article class="tarjeta" data-signo="sagitario" data-elemento="fuego">
+                <span class="simbolo">♐</span><h2>Sagitario</h2>
+                <p class="fechas">22 nov – 21 dic</p><p class="elemento">🔥 Fuego</p>
+            </article>
+            <!-- Capricornio -->
+            <article class="tarjeta" data-signo="capricornio" data-elemento="tierra">
+                <span class="simbolo">♑</span><h2>Capricornio</h2>
+                <p class="fechas">22 dic – 19 ene</p><p class="elemento">🌱 Tierra</p>
+            </article>
+            <!-- Acuario -->
+            <article class="tarjeta" data-signo="acuario" data-elemento="aire">
+                <span class="simbolo">♒</span><h2>Acuario</h2>
+                <p class="fechas">20 ene – 18 feb</p><p class="elemento">💨 Aire</p>
+            </article>
+            <!-- Piscis -->
+            <article class="tarjeta" data-signo="piscis" data-elemento="agua">
+                <span class="simbolo">♓</span><h2>Piscis</h2>
+                <p class="fechas">19 feb – 20 mar</p><p class="elemento">💧 Agua</p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

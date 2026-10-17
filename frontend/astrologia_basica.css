@@ -1,0 +1,144 @@
+:root {
+    --fondo: #1e1b4b;
+    --tarjeta: #312e81;
+    --acento: #fbbf24;
+    --texto: #f5f3ff;
+}
+body {
+    margin: 0;
+    padding: 20px;
+    background: var(--fondo);
+    color: var(--texto);
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*-------------------------------*/
+/*--|estilos_astrologia_basica|--*/
+/*-------------------------------*/
+.contenedor {
+    max-width: 760px;
+    margin: 0 auto;
+}
+.encabezado {
+    margin-bottom: 24px;
+    text-align: center;
+}
+.encabezado h1 {
+    margin-bottom: 8px;
+    color: var(--acento);
+}
+.encabezado p {
+    margin: 0;
+    color: #c4b5fd;
+    line-height: 1.5;
+}
+/*---------------------*/
+/*--|estilos_filtros|--*/
+/*---------------------*/
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.filtro {
+    padding: 10px 16px;
+    border: 1px solid #4c1d95;
+    border-radius: 8px;
+    background: var(--tarjeta);
+    color: var(--texto);
+    cursor: pointer;
+}
+.filtro:hover {
+    border-color: var(--acento);
+}
+.filtro.activo {
+    background: var(--acento);
+    color: #1e1b4b;
+}
+/*--------------------------------*/
+/*--|estilos_barra_de_favoritos|--*/
+/*--------------------------------*/
+.barra {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+#contador {
+    font-weight: bold;
+}
+.limpiar {
+    padding: 9px 14px;
+    border: 1px solid #7c3aed;
+    border-radius: 8px;
+    background: transparent;
+    color: var(--texto);
+    cursor: pointer;
+}
+.limpiar:hover {
+    border-color: var(--acento);
+    color: var(--acento);
+}
+/*--------------------------------*/
+/*--|estilos_tarjetas_de_signos|--*/
+/*--------------------------------*/
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+.tarjeta {
+    position: relative;
+    padding: 16px 10px;
+    border: 3px solid transparent;
+    border-radius: 12px;
+    background: var(--tarjeta);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s, border-color 0.2s;
+}
+.tarjeta:hover {
+    transform: translateY(-4px);
+}
+.tarjeta.oculta {
+    display: none;
+}
+/*---------------------------------------*/
+/*--|estilos_contenido_de_las_tarjetas|--*/
+/*---------------------------------------*/
+.simbolo {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--acento);
+    font-size: 32px;
+}
+.tarjeta h2 {
+    margin: 8px 0;
+    font-size: 18px;
+}
+.fechas {
+    margin: 8px 0;
+    color: #c4b5fd;
+    font-size: 12px;
+}
+.elemento {
+    margin: 8px 0 0;
+    font-size: 13px;
+}
+/*------------------------------*/
+/*--|estilos_signos_favoritos|--*/
+/*------------------------------*/
+.tarjeta.favorito {
+    border-color: var(--acento);
+}
+.tarjeta.favorito::after {
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    color: var(--acento);
+    content: "★";
+    font-size: 16px;
+}
